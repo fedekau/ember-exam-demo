@@ -1,0 +1,7 @@
+#!/bin/bash
+
+START=$(date +%s)
+ember test --filter "Acceptance | demo route"
+END=$(date +%s)
+DIFF=$(echo "$END - $START" | bc)
+echo "Time: $DIFF"
